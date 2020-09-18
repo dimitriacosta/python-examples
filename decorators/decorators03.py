@@ -1,4 +1,4 @@
-from external import do_twice
+from decorators import do_twice
 
 @do_twice
 def return_greeting(name):
