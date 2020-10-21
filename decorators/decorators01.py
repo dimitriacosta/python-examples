@@ -1,6 +1,10 @@
+"""
+Example 01
+"""
 from datetime import datetime
 
 def not_during_the_night(func):
+    """Define our decorator"""
     def wrapper():
         if 7 <= datetime.now().hour < 22:
             func()
@@ -10,6 +14,7 @@ def not_during_the_night(func):
 
 
 def say_whee():
+    """This function will be decorated"""
     print("Whee!")
 
 
