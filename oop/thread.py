@@ -1,7 +1,11 @@
+"""
+Threads example
+"""
 import threading
 
 def hello():
-    for x in range(50):
+    """Create thread to print a message"""
+    for _ in range(50):
         print("Hello!")
 
 t1 = threading.Thread(target=hello)

@@ -1,4 +1,8 @@
+"""
+Instance method example
+"""
 class Dog:
+    """Define a dog"""
 
     species = 'mammal'
 
@@ -7,10 +11,12 @@ class Dog:
         self.age = age
 
     def description(self):
-        return "{} is {} years old.".format(self.name, self.age)
+        """Return dog's description"""
+        return f"{self.name} is {self.age} years old."
 
     def speak(self, sound):
-        return "{} says {}".format(self.name, sound)
+        """Return the dog's sound"""
+        return f"{self.name} says {sound}"
 
 # Instantiate the dog object
 mikey = Dog('Mikey', 6)

@@ -1,29 +1,34 @@
+"""
+Locking threads example
+"""
 import threading
 import time
 
-x = 8192
+X = 8192
 
-lock = threading.Lock()
+LOCK = threading.Lock()
 
 def double():
-    global x, lock
-    lock.acquire()
-    while x < 16384:
-        x *= 2
-        print(x)
+    """Double the number"""
+    global X, LOCK
+    LOCK.acquire()
+    while X < 16384:
+        X *= 2
+        print(X)
         time.sleep(1)
     print("Reached the maximum")
-    lock.release()
+    LOCK.release()
 
 def halve():
-    global x, lock
-    lock.acquire()
-    while x > 1:
-        x /= 2
-        print(x)
+    """Halve the number"""
+    global X, LOCK
+    LOCK.acquire()
+    while X > 1:
+        X /= 2
+        print(X)
         time.sleep(1)
     print("Reached the minimum")
-    lock.release()
+    LOCK.release()
 
 t1 = threading.Thread(target=halve)
 t2 = threading.Thread(target=double)
