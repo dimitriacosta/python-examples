@@ -1,3 +1,7 @@
+"""
+Last Input First Output
+Queue example
+"""
 import queue
 
 q = queue.LifoQueue()

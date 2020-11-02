@@ -1,3 +1,7 @@
+"""
+Priority
+Queue example
+"""
 import queue
 
 q = queue.PriorityQueue()

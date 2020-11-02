@@ -1,3 +1,7 @@
+"""
+First Input First Output
+Queue example
+"""
 import queue
 
 q = queue.Queue()
