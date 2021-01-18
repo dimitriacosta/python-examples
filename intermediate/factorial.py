@@ -1,17 +1,20 @@
-n = 7
+"""
+Calculate the factorial of a number
+"""
+NUM = 7
 
-fact = 1
-while n > 0:
-    fact = fact * n
-    n -= 1
+FACTORIAL = 1
+while NUM > 0:
+    FACTORIAL = FACTORIAL * NUM
+    NUM -= 1
 
-print(fact)
+print(FACTORIAL)
 
-def factorial(n):
-    if n < 1:
+def factorial(value):
+    """Generate the factorial value of a number"""
+    if value < 1:
         return 1
-    else:
-        value = n * factorial(n - 1)
-        return value
+    value = value * factorial(value - 1)
+    return value
 
 print(factorial(7))

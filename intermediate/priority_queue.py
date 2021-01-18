@@ -1,6 +1,5 @@
 """
-Priority
-Queue example
+Priority Queue example
 """
 import queue
 
